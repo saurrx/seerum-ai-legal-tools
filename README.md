@@ -4,6 +4,18 @@
 
 Type a sentence about your new client. Get back a complete intake analysis, compliance document checklist, and agreement outline. In seconds, not hours.
 
+<p align="center">
+  <a href="https://github.com/saurrx/seerum-ai-legal-tools/releases/latest/download/seerum-ai-legal-tools.mcpb">
+    <img src="https://img.shields.io/badge/%E2%AC%87%EF%B8%8F_Install_in_Claude_Desktop-One--Click_Install-7C3AED?style=for-the-badge&labelColor=1a1a2e" alt="Install in Claude Desktop" height="50">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/seerum-ai-legal-tools"><img src="https://img.shields.io/npm/v/seerum-ai-legal-tools?style=flat-square&label=npm&color=CB3837" alt="npm version"></a>
+  <a href="https://github.com/saurrx/seerum-ai-legal-tools/releases/latest"><img src="https://img.shields.io/github/v/release/saurrx/seerum-ai-legal-tools?style=flat-square&label=release&color=7C3AED" alt="GitHub release"></a>
+  <a href="https://github.com/saurrx/seerum-ai-legal-tools/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="MIT License"></a>
+</p>
+
 ---
 
 ## What This Does
