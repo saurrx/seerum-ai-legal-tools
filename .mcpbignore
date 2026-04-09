@@ -1,0 +1,6 @@
+.context/
+.git
+.gitignore
+.DS_Store
+claude_desktop_config_snippet.json
+*.mcpb

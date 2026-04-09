@@ -1,0 +1,37 @@
+{
+  "name": "seerum-ai-legal-tools",
+  "version": "1.0.0",
+  "description": "MCP server for healthcare law workflows — state requirements, compliance packages, agreement drafting. Built by seerum.ai",
+  "type": "module",
+  "bin": {
+    "seerum-ai-legal-tools": "src/index.js"
+  },
+  "files": [
+    "src/",
+    "data/"
+  ],
+  "scripts": {
+    "start": "node src/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector node src/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "legal",
+    "healthcare",
+    "medspa",
+    "claude",
+    "seerum",
+    "anthropic"
+  ],
+  "author": "seerum.ai",
+  "homepage": "https://seerum.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saurrx/seerum-ai-legal-tools.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.3.6"
+  }
+}

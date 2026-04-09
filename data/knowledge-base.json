@@ -1,0 +1,599 @@
+{
+  "disclaimer": "SAMPLE DATA FOR DEMO PURPOSES ONLY. Not legal advice. In production, this database would be built with Lengea's proprietary state-by-state compliance data and reviewed by attorneys.",
+  
+  "states": {
+    "texas": {
+      "name": "Texas",
+      "cpom_doctrine": true,
+      "cpom_description": "Texas enforces a strict Corporate Practice of Medicine (CPOM) doctrine. Non-physicians cannot directly own or control a medical practice that provides medical aesthetic services.",
+      "ownership": {
+        "physician_direct": true,
+        "physician_entity_types": ["PLLC (Professional Limited Liability Company)", "PA (Professional Association)"],
+        "non_physician_direct": false,
+        "non_physician_path": "MSO model — non-physician owns the Management Services Organization (LLC) which handles all business/admin functions. A separate physician-owned PLLC or PA handles all clinical services. The two entities are connected by a Management Services Agreement (MSA).",
+        "pa_minority_ownership": true,
+        "np_ownership": false,
+        "rn_ownership": false,
+        "key_statute": "Texas Occupations Code; Texas Medical Board Rule 193"
+      },
+      "medical_director": {
+        "required": true,
+        "who_qualifies": "Licensed physician (MD or DO) with active unrestricted Texas medical license",
+        "supervision_level": "Must establish written protocols, provide oversight, and be available for consultation. Does not need to be on-site at all times but must be reasonably available.",
+        "geographic_restriction": "No strict statutory geographic limit, but must be able to respond within a reasonable timeframe",
+        "key_duties": [
+          "Establish and approve treatment protocols for all medical procedures",
+          "Supervise and delegate medical acts to qualified personnel",
+          "Conduct or ensure completion of good faith examinations",
+          "Review charts and ensure quality of care",
+          "Ensure all staff are properly trained and credentialed"
+        ]
+      },
+      "scope_of_practice": {
+        "physician_md_do": {
+          "can_perform": ["All medical procedures", "Prescribe medications", "Supervise and delegate to qualified staff"],
+          "supervision_required": "None — independent practice"
+        },
+        "nurse_practitioner_np": {
+          "can_perform": ["Injectables (Botox, fillers)", "IV therapy", "Microneedling", "Prescriptive authority under collaborative agreement"],
+          "supervision_required": "Must have prescriptive authority agreement with supervising physician. Cannot practice independently for med spa services.",
+          "notes": "NPs cannot own the medical practice entity. Can own the MSO."
+        },
+        "physician_assistant_pa": {
+          "can_perform": ["Injectables under physician delegation", "IV therapy", "Microneedling", "Laser treatments under delegation"],
+          "supervision_required": "Must have supervising physician. Written delegation required.",
+          "notes": "PAs may hold minority ownership stake (up to 49%) in the medical entity."
+        },
+        "registered_nurse_rn": {
+          "can_perform": ["Injectables (Botox, fillers) under physician delegation and orders", "IV therapy under protocol", "Microneedling under delegation"],
+          "supervision_required": "Must work under physician-issued orders. Cannot independently initiate treatment.",
+          "notes": "RN cannot diagnose, prescribe, or perform good faith exams. Must have patient-specific physician orders."
+        },
+        "aesthetician": {
+          "can_perform": ["Non-invasive facials", "Superficial chemical peels", "Microdermabrasion", "LED therapy", "Laser hair removal (in some cases with training)"],
+          "supervision_required": "Cannot perform medical procedures. Limited to non-medical cosmetic treatments.",
+          "notes": "Cannot perform microneedling, injectables, or any procedure classified as practice of medicine."
+        }
+      },
+      "key_regulations": [
+        "Texas Medical Board Rule 193 governs delegation of medical acts",
+        "HB 3749 (effective Sept 1, 2025) — Texas IV Therapy Bill clarifies who can administer IV therapy and supervision requirements",
+        "HB 3567 proposals may affect RN supervision requirements — actively monitor",
+        "Advertising must comply with Texas Occupations Code Chapter 102 (Truth in Healthcare Marketing)",
+        "Good faith exams required before first treatment — can be virtual but phone-only not recommended for new patients",
+        "All medical spa services (injectables, laser, IV, microneedling) classified as practice of medicine"
+      ],
+      "entity_formation": {
+        "physician_entity": "PLLC or PA filed with Texas Secretary of State",
+        "mso_entity": "LLC filed with Texas Secretary of State",
+        "ein_required": true,
+        "dba_filing": "Assumed name certificate filed with county clerk",
+        "estimated_timeline": "6-10 weeks from start to operational",
+        "key_filings": ["PLLC/PA formation with TX SOS", "LLC formation for MSO", "EIN application (IRS)", "Assumed Name Certificate", "Sales tax permit", "Local business license"]
+      },
+      "recent_developments": [
+        "HB 3749 (2025): New IV therapy supervision standards",
+        "Increased Texas Medical Board enforcement actions against non-compliant med spas",
+        "Growing scrutiny of MSO structures — TMB looking for 'paper directors' who are uninvolved"
+      ]
+    },
+
+    "california": {
+      "name": "California",
+      "cpom_doctrine": true,
+      "cpom_description": "California has one of the strictest CPOM doctrines in the nation. Business & Professions Code Section 2052 reserves medical practice ownership exclusively to licensed physicians. Regulators have aggressively shut down non-compliant spas.",
+      "ownership": {
+        "physician_direct": true,
+        "physician_entity_types": ["PC (Professional Corporation)"],
+        "non_physician_direct": false,
+        "non_physician_path": "MSO (LLC) + Physician-owned PC (Professional Corporation). The 'Friendly PC-MSO' model is the gold standard. Physician must own at least 51% of the PC. Certain allied health professionals (NPs, PAs, RNs) may own up to 49% of the PC.",
+        "pa_minority_ownership": true,
+        "np_ownership": "Minority ownership up to 49% of PC. Under Assembly Bill 890 (effective Jan 2023), NPs may gain expanded practice authority. Full independent NP med spa ownership expected to evolve by 2026-2027.",
+        "rn_ownership": "Up to 49% of the PC. Cannot own majority.",
+        "key_statute": "Business & Professions Code §2052; Medical Board of California enforcement"
+      },
+      "medical_director": {
+        "required": true,
+        "who_qualifies": "Licensed physician (MD or DO) with active unrestricted California medical license",
+        "supervision_level": "Direct supervision required for certain procedures. Written standardized procedures must be in place. Must be actively involved — California aggressively targets 'paper directors'.",
+        "geographic_restriction": "Must be able to respond in-person within a reasonable timeframe. Physical proximity expected.",
+        "key_duties": [
+          "Maintain complete control over all clinical decisions",
+          "Establish written standardized procedures for all delegated acts",
+          "Supervise all clinical staff including nurses and injectors",
+          "Ensure all patient payments for medical services flow to the PC, not the MSO",
+          "Conduct or oversee good faith examinations"
+        ]
+      },
+      "scope_of_practice": {
+        "physician_md_do": {
+          "can_perform": ["All medical and aesthetic procedures", "Prescribe all medications", "Own and control professional corporation"],
+          "supervision_required": "None — independent practice"
+        },
+        "nurse_practitioner_np": {
+          "can_perform": ["Injectables under standardized procedures", "IV therapy", "Microneedling with supervision", "Prescriptive authority under collaborative agreement"],
+          "supervision_required": "Must practice under standardized procedures or physician supervision. AB 890 expanding scope gradually.",
+          "notes": "May own up to 49% of the PC. AB 890 timeline: group practice without standardized procedures after meeting criteria, full practice authority after 3 additional years."
+        },
+        "physician_assistant_pa": {
+          "can_perform": ["Injectables under delegation", "Laser treatments under supervision", "IV therapy"],
+          "supervision_required": "Must have supervising physician. Written delegation agreement required.",
+          "notes": "Delegation agreement must be on file. PA scope is broad but always under physician supervision."
+        },
+        "registered_nurse_rn": {
+          "can_perform": ["Injectables under standardized procedures and physician orders", "IV therapy under protocol"],
+          "supervision_required": "Must work under physician orders and standardized procedures. Cannot independently initiate treatment.",
+          "notes": "Cannot perform microneedling independently. Must have patient-specific orders."
+        },
+        "aesthetician": {
+          "can_perform": ["Non-invasive treatments only", "Superficial chemical peels", "Facials", "LED therapy"],
+          "supervision_required": "Cannot perform any medical procedures. Strictly non-medical cosmetic treatments.",
+          "notes": "Cannot perform microneedling (classified as medical in CA). Cannot perform laser treatments except laser hair removal in some cases."
+        }
+      },
+      "key_regulations": [
+        "B&P Code §2052 — Strict Corporate Practice of Medicine doctrine",
+        "Only licensed physicians may own a Professional Corporation (PC) providing medical services",
+        "MSO may never control or influence clinical decisions, staffing of clinical roles, or medical records",
+        "Assembly Bill 890 (2020, effective 2023) — expanding NP scope of practice gradually",
+        "Medical Board of California actively enforces against 'paper directors' and non-compliant MSO arrangements",
+        "Fee-splitting with non-physicians is prohibited — MSO fees must be at fair market value",
+        "Salon license required if offering facials or non-medical aesthetician services"
+      ],
+      "entity_formation": {
+        "physician_entity": "PC (Professional Corporation) filed with California Secretary of State",
+        "mso_entity": "LLC filed with California Secretary of State",
+        "ein_required": true,
+        "dba_filing": "Fictitious Business Name Statement filed with county clerk",
+        "estimated_timeline": "8-14 weeks (CA processing times are significantly longer than most states)",
+        "key_filings": ["PC Articles of Incorporation with CA SOS", "LLC Articles of Organization for MSO", "EIN application", "Fictitious Business Name Statement", "City business license", "Board of Equalization seller's permit"]
+      },
+      "recent_developments": [
+        "AB 890 NP scope expansion continuing to roll out — monitor for med spa impacts",
+        "People ex rel. Allstate v. Discovery Radiology (2023): Court held non-physician control over staffing/billing can constitute unlicensed practice",
+        "Medical Board increasing investigations of MSO arrangements",
+        "Processing times remain long — plan 3-4 months for full entity setup"
+      ]
+    },
+
+    "florida": {
+      "name": "Florida",
+      "cpom_doctrine": false,
+      "cpom_description": "Florida does NOT enforce a traditional Corporate Practice of Medicine doctrine for med spas. Non-physicians CAN directly own med spa businesses, making Florida one of the more permissive states. However, all medical services must still be overseen by a licensed physician medical director.",
+      "ownership": {
+        "physician_direct": true,
+        "physician_entity_types": ["LLC", "PA (Professional Association)", "PLLC", "Corporation", "Sole Proprietorship"],
+        "non_physician_direct": true,
+        "non_physician_path": "Non-physicians can own a med spa directly as an LLC. An MSO structure is not required but may still be advisable for liability protection. A licensed physician medical director must oversee all medical services regardless of ownership structure.",
+        "pa_minority_ownership": true,
+        "np_ownership": true,
+        "rn_ownership": "Technically possible but must have physician medical director oversight for all medical services",
+        "key_statute": "F.S. §400.9935 (Health Care Clinic Act); F.S. §458.347 (PA supervision); F.S. §464.012 (APRN protocols)"
+      },
+      "medical_director": {
+        "required": true,
+        "who_qualifies": "Licensed physician (MD or DO) with active unrestricted Florida medical license. Board certification preferred but not always required.",
+        "supervision_level": "Must establish protocols and provide oversight. Does not need to be on-site at all times but must be available for consultation and provide active supervision.",
+        "geographic_restriction": "Should be within reasonable proximity to the practice. No strict statutory distance requirement.",
+        "key_duties": [
+          "Ensure compliance with all applicable regulations",
+          "Verify licensure of all clinical staff",
+          "Establish and approve treatment protocols",
+          "Maintain adequate medical recordkeeping",
+          "Provide quality assurance oversight"
+        ]
+      },
+      "scope_of_practice": {
+        "physician_md_do": {
+          "can_perform": ["All medical and aesthetic procedures", "Full prescriptive authority", "Supervise and delegate"],
+          "supervision_required": "None — independent practice"
+        },
+        "nurse_practitioner_np": {
+          "can_perform": ["Injectables", "IV therapy", "Microneedling", "Laser treatments", "Independent prescribing (with autonomous registration)"],
+          "supervision_required": "Non-autonomous APRNs: written physician protocol per F.S. §464.012. Autonomous APRNs under HB 607 (2020): may practice independently in primary care but NOT in aesthetics — physician protocols still required for med spa services.",
+          "notes": "Autonomous APRN status does NOT extend to aesthetic procedures. Physician protocols remain standard of care for med spa services."
+        },
+        "physician_assistant_pa": {
+          "can_perform": ["Injectables under supervision", "Laser treatments", "IV therapy", "Microneedling"],
+          "supervision_required": "Must practice under written supervision agreement with physician per F.S. §458.347. Agreement defines duties, prescriptive privileges, and supervision parameters.",
+          "notes": "PAs can own med spas in Florida with a medical director."
+        },
+        "registered_nurse_rn": {
+          "can_perform": ["Injectables (Botox, fillers) under physician protocols and direct supervision", "IV therapy under protocol", "Microneedling under delegation"],
+          "supervision_required": "Must work under direct supervision of medical director. Physician must remain available for consultation.",
+          "notes": "Florida Board of Nursing guidance on RN scope for injectables has been contradictory — consult legal counsel. Malpractice insurance strongly recommended."
+        },
+        "aesthetician": {
+          "can_perform": ["Facials", "Chemical peels (superficial)", "Microdermabrasion", "LED therapy", "Body treatments", "Massages"],
+          "supervision_required": "Limited to non-medical cosmetic treatments.",
+          "notes": "Cannot perform injectables, microneedling, or laser treatments."
+        }
+      },
+      "key_regulations": [
+        "Florida does NOT have strict CPOM — non-physicians can own med spas directly",
+        "Health Care Clinic Act (F.S. §400.9935) — clinic registration and medical director requirements",
+        "HB 607 (2020) — APRN autonomous practice authority, but does NOT extend to aesthetic/med spa procedures",
+        "F.S. §458.347 — PA supervision requirements",
+        "Board of Medicine has increased enforcement of med spa compliance",
+        "No mandatory chart review percentage — but documentation of physician oversight required",
+        "Good faith exams required before first treatment"
+      ],
+      "entity_formation": {
+        "physician_entity": "LLC, PA, PLLC, or Corporation filed with Florida Division of Corporations",
+        "mso_entity": "MSO optional — may be advisable for liability separation even though not required by CPOM",
+        "ein_required": true,
+        "dba_filing": "Fictitious Name Registration with FL Division of Corporations",
+        "estimated_timeline": "4-6 weeks (Florida formation is relatively fast)",
+        "key_filings": ["LLC or other entity formation with FL Division of Corporations", "EIN application", "Fictitious Name Registration", "Health Care Clinic License (if applicable)", "City/county business license", "Sales tax registration"]
+      },
+      "recent_developments": [
+        "Continued clarity around APRN autonomous practice — NOT applicable to aesthetics",
+        "Increased Board of Medicine enforcement actions",
+        "Growing market — Florida is one of the top 3 states for med spa openings",
+        "No strict CPOM makes FL attractive for entrepreneurs, but proper structure still critical for liability"
+      ]
+    },
+
+    "new_york": {
+      "name": "New York",
+      "cpom_doctrine": true,
+      "cpom_description": "New York enforces one of the most rigid interpretations of the Corporate Practice of Medicine doctrine. Education Law §6522 prohibits non-physicians from owning, controlling, or influencing medical practice. Med spas must operate through a physician-owned PC or PLLC authorized by the New York State Education Department (NYSED). Violations are a Class E felony.",
+      "ownership": {
+        "physician_direct": true,
+        "physician_entity_types": ["PC (Professional Corporation)", "PLLC (Professional Limited Liability Company)"],
+        "non_physician_direct": false,
+        "non_physician_path": "MSO (LLC) + Physician-owned PC or PLLC. The professional entity must be authorized by the New York State Education Department (NYSED). PLLC formation requires affidavit filing with NYSED Office of the Professions. MSO arrangements are closely scrutinized — cannot involve fee-splitting based on volume or value of business.",
+        "pa_minority_ownership": false,
+        "np_ownership": "NPs may form a PC or PLLC after meeting 3,600 hours supervised practice requirement for Full Practice Authority under Education Law §6902(3)(b-1). Before that, must have written collaborative agreement with physician.",
+        "rn_ownership": false,
+        "key_statute": "Education Law §6522; Education Law §6530(19); Regents Rules Part 29"
+      },
+      "medical_director": {
+        "required": true,
+        "who_qualifies": "Licensed physician (MD or DO) with active unrestricted New York medical license verified through NYSED Office of the Professions",
+        "supervision_level": "Active involvement required — New York strictly prohibits 'name-only' medical directors. On-site supervision required for medical procedures. Must have training and experience relevant to procedures offered.",
+        "geographic_restriction": "Must be physically present or immediately available. Remote-only medical direction is insufficient.",
+        "key_duties": [
+          "Direct supervision and oversight of all medical procedures",
+          "Establish written protocols for all delegated procedures",
+          "Conduct or oversee good faith examinations",
+          "Maintain complete medical records",
+          "Ensure all practitioners work within their licensed scope",
+          "Active involvement in clinical operations — not just a signature"
+        ]
+      },
+      "scope_of_practice": {
+        "physician_md_do": {
+          "can_perform": ["All medical and aesthetic procedures", "Full prescriptive authority", "Own and control PC/PLLC"],
+          "supervision_required": "None — independent practice"
+        },
+        "nurse_practitioner_np": {
+          "can_perform": ["Injectables under physician orders or independent (with FPA)", "IV therapy", "Prescriptive authority"],
+          "supervision_required": "Under 3,600 hours: written collaborative agreement with physician required. After 3,600 hours: Full Practice Authority (FPA) under Education Law §6902(3)(b-1). Even with FPA, must follow clinic-specific procedural policies for aesthetics.",
+          "notes": "NPs with FPA may form their own PC/PLLC. Microneedling and PDO threading may be outside NP scope — consult legal counsel."
+        },
+        "physician_assistant_pa": {
+          "can_perform": ["Injectables under physician supervision", "Procedures within written practice agreement"],
+          "supervision_required": "Must have written supervisory agreement with physician on file. Physician must be accessible.",
+          "notes": "Cannot own medical practice entity in NY."
+        },
+        "registered_nurse_rn": {
+          "can_perform": ["Execute patient-specific physician orders for injectables", "IV therapy under orders", "Assist with medical procedures"],
+          "supervision_required": "Must work under patient-specific physician orders — NOT standing orders. Physician must examine patient first and issue specific orders.",
+          "notes": "Microneedling and PDO threading are outside RN scope in NY. Cannot perform good faith exams. Cannot independently initiate treatment."
+        },
+        "aesthetician": {
+          "can_perform": ["Superficial chemical peels (above stratum corneum)", "Facials", "Laser hair removal (currently unregulated in NY — anyone can perform it)"],
+          "supervision_required": "Licensed by Department of State (not Education). Legally equivalent to medical assistant.",
+          "notes": "Cannot perform microneedling (invasive). Cannot perform injectables. Laser hair removal remains unregulated in NY as of 2026. Cannot hire licensed professionals to perform procedures on their behalf."
+        }
+      },
+      "key_regulations": [
+        "Education Law §6522 — Strict CPOM prohibition. Violations are Class E felony.",
+        "Education Law §6530(19) — Fee-splitting prohibition",
+        "NYSED Office of the Professions oversees professional entity licensing",
+        "PLLC formation requires affidavit filing with NYSED (adds weeks to formation timeline)",
+        "MSO fee arrangements must be fixed and reasonable — cannot be based on volume or value of business",
+        "2026: New LLC beneficial ownership disclosure requirements",
+        "2026: DOH 30-day pre-closing notice required for material transactions (sales, PE investments, MSO restructuring)",
+        "2026: 223 businesses inspected, 87 citations issued — enforcement increasing",
+        "Energy-based device treatments (except laser hair removal) classified as medical practice as of March 2025"
+      ],
+      "entity_formation": {
+        "physician_entity": "PC or PLLC filed with NY Department of State AND authorized by NYSED",
+        "mso_entity": "LLC filed with NY Department of State",
+        "ein_required": true,
+        "dba_filing": "Assumed Name filing with county clerk",
+        "estimated_timeline": "8-12 weeks (PLLC requires NYSED Education Department approval which adds significant time)",
+        "key_filings": ["PLLC/PC Articles filed with NY DOS", "NYSED professional entity authorization (requires affidavit)", "LLC formation for MSO", "EIN application", "NYC-specific licenses if applicable", "Sales tax certificate of authority"],
+        "nyc_specific": "NYC may have additional local licensing requirements and zoning considerations"
+      },
+      "recent_developments": [
+        "2026: LLC Beneficial Ownership Reporting — new LLCs must file within 30 days; existing LLCs by Jan 1, 2027",
+        "2026: DOH 30-day pre-closing notice for material transactions",
+        "Energy-based devices (lasers, RF, IPL) reclassified as medical practice (March 2025) — except laser hair removal",
+        "Potential esthetician scope expansion legislation pending — monitor",
+        "Four NYC med spas closed in 2025 due to documentation lapses — enforcement is real"
+      ]
+    },
+
+    "illinois": {
+      "name": "Illinois",
+      "cpom_doctrine": false,
+      "cpom_description": "Illinois does NOT strictly enforce the Corporate Practice of Medicine doctrine. Illinois is considered one of the more permissive states for med spa ownership. Non-physicians can own medical practices, though a licensed physician medical director must oversee all medical services.",
+      "ownership": {
+        "physician_direct": true,
+        "physician_entity_types": ["SC (Service Corporation)", "LLC", "PC", "Corporation"],
+        "non_physician_direct": true,
+        "non_physician_path": "Non-physicians can own a med spa directly through an LLC or corporation. An MSO structure is not legally required but may be used for business structuring and liability purposes. Must have physician medical director for all medical services.",
+        "pa_minority_ownership": true,
+        "np_ownership": true,
+        "rn_ownership": "Possible with medical director oversight",
+        "key_statute": "Medical Practice Act (225 ILCS 60); Illinois Nurse Practice Act"
+      },
+      "medical_director": {
+        "required": true,
+        "who_qualifies": "Licensed physician (MD or DO) with active Illinois medical license",
+        "supervision_level": "Must provide oversight for all medical procedures. Written collaborative agreements required for NPs and PAs.",
+        "geographic_restriction": "No strict geographic requirement but must be reasonably available for consultation and oversight",
+        "key_duties": [
+          "Oversee all medical procedures and clinical operations",
+          "Establish treatment protocols",
+          "Supervise mid-level providers under collaborative agreements",
+          "Ensure compliance with state medical practice regulations",
+          "Review and approve treatment plans"
+        ]
+      },
+      "scope_of_practice": {
+        "physician_md_do": {
+          "can_perform": ["All medical and aesthetic procedures", "Full prescriptive authority", "Direct ownership"],
+          "supervision_required": "None — independent practice"
+        },
+        "nurse_practitioner_np": {
+          "can_perform": ["Injectables", "IV therapy", "Microneedling", "Laser treatments", "Full Practice Authority available"],
+          "supervision_required": "Illinois grants Full Practice Authority (FPA) to NPs. NPs can practice independently after meeting requirements. Written collaborative agreement may still be required depending on employment setting.",
+          "notes": "Illinois is a Full Practice Authority state for NPs. NPs can own med spas directly."
+        },
+        "physician_assistant_pa": {
+          "can_perform": ["Injectables under collaborative agreement", "IV therapy", "Laser treatments", "Microneedling"],
+          "supervision_required": "Must have written collaborative agreement with supervising physician.",
+          "notes": "PA scope in aesthetics is broad under proper collaborative agreement."
+        },
+        "registered_nurse_rn": {
+          "can_perform": ["Injectables under physician orders and supervision", "IV therapy under protocol", "Microneedling under delegation"],
+          "supervision_required": "Must work under physician orders. Cannot independently initiate treatment.",
+          "notes": "Scope similar to other states — orders required before performing medical procedures."
+        },
+        "aesthetician": {
+          "can_perform": ["Facials", "Superficial chemical peels", "Microdermabrasion", "LED therapy", "Some laser treatments with proper training and certification"],
+          "supervision_required": "Limited to licensed scope. Medical procedures require physician delegation.",
+          "notes": "Illinois aesthetician scope may include some device-based treatments with proper licensing."
+        }
+      },
+      "key_regulations": [
+        "No strict CPOM — non-physicians can own med spas directly",
+        "Medical Practice Act (225 ILCS 60) governs medical practice",
+        "NPs have Full Practice Authority in Illinois",
+        "Collaborative agreements still recommended even where not strictly required",
+        "Standard HIPAA, OSHA, and good faith exam requirements apply",
+        "Advertising must be truthful and not misleading"
+      ],
+      "entity_formation": {
+        "physician_entity": "LLC, SC, PC, or Corporation filed with Illinois Secretary of State",
+        "mso_entity": "Not required — but may be used for business structuring",
+        "ein_required": true,
+        "dba_filing": "Assumed Business Name registration with county clerk",
+        "estimated_timeline": "4-8 weeks",
+        "key_filings": ["Entity formation with IL SOS", "EIN application", "Assumed Business Name registration", "City/county business license", "Sales tax registration"]
+      },
+      "recent_developments": [
+        "Illinois remains one of the more business-friendly states for med spa formation",
+        "NP Full Practice Authority well-established — attracts NP-owned practices",
+        "Growing market in Chicago metro area"
+      ]
+    }
+  },
+
+  "services_to_documents": {
+    "neurotoxins_botox": {
+      "display_name": "Neurotoxins (Botox, Dysport, Xeomin, Jeuveau, Daxxify)",
+      "required_documents": ["Neurotoxin Treatment Consent Form", "Good Faith Exam / Patient Intake Form", "Pre & Post Treatment Instructions (Neurotoxin)", "Photo Consent Form"],
+      "compliance_documents": ["Treatment Protocol — Neurotoxin Administration", "Vascular Occlusion Emergency Protocol", "Adverse Event Documentation Form"],
+      "staff_requirements": "Must be performed by licensed physician, NP, PA, or RN under physician orders (state-dependent)"
+    },
+    "dermal_fillers": {
+      "display_name": "Dermal Fillers (Juvederm, Restylane, Sculptra, Radiesse, RHA, Belotero)",
+      "required_documents": ["Dermal Filler Treatment Consent Form", "Hyaluronidase Consent (for filler dissolution)", "Good Faith Exam / Patient Intake Form", "Pre & Post Treatment Instructions (Filler)", "Photo Consent Form"],
+      "compliance_documents": ["Treatment Protocol — Dermal Filler Administration", "Vascular Occlusion Emergency Protocol", "Hyaluronidase Emergency Protocol", "Adverse Event Documentation Form"],
+      "staff_requirements": "Must be performed by licensed physician, NP, PA, or RN under physician orders (state-dependent)"
+    },
+    "iv_therapy": {
+      "display_name": "IV Hydration & Vitamin Therapy",
+      "required_documents": ["IV Vitamin Injection Consent Form", "Good Faith Exam / Patient Intake Form", "Pre & Post Treatment Instructions (IV Therapy)", "Medical History Questionnaire"],
+      "compliance_documents": ["IV Therapy Administration Protocol", "Anaphylaxis Emergency Protocol", "Needlestick Protocol"],
+      "staff_requirements": "Must be administered by RN or above under physician protocols. TX HB 3749 has specific supervision requirements."
+    },
+    "microneedling": {
+      "display_name": "Microneedling (with or without PRP/Exosomes)",
+      "required_documents": ["Microneedling Consent Form", "PRP Consent (if applicable)", "Exosome Therapy Consent (if applicable)", "Good Faith Exam / Patient Intake Form", "Pre & Post Treatment Instructions (Microneedling)", "Photo Consent Form"],
+      "compliance_documents": ["Microneedling Treatment Protocol", "Infection Control Protocol", "Bloodborne Pathogens Exposure Plan"],
+      "staff_requirements": "Classified as medical procedure in most states. Cannot be performed by aestheticians in CA and NY. Requires physician delegation."
+    },
+    "laser_treatments": {
+      "display_name": "Laser & Energy-Based Treatments (IPL, RF Microneedling, Fractional Laser, Sciton, Morpheus8)",
+      "required_documents": ["Laser/Energy Device Treatment Consent Form", "Good Faith Exam / Patient Intake Form", "Pre & Post Treatment Instructions (Laser)", "Photo Consent Form", "Fitzpatrick Skin Type Assessment"],
+      "compliance_documents": ["Laser Safety Protocol", "Device-Specific Treatment Protocol", "Eye Protection Protocol", "Equipment Maintenance & Calibration Log", "Operator Training Certification"],
+      "staff_requirements": "Classified as medical practice in NY (as of March 2025 except hair removal). Must be performed by qualified licensed provider. Device-specific training required."
+    },
+    "weight_loss_glp1": {
+      "display_name": "Weight Loss / GLP-1 Medications (Semaglutide, Tirzepatide)",
+      "required_documents": ["Weight Loss / GLP-1 Treatment Consent Form", "Semaglutide-Specific Consent (if applicable)", "Tirzepatide-Specific Consent (if applicable)", "Comprehensive Medical History & Physical Exam Form", "BMI Assessment Form", "Lab Work Order Form"],
+      "compliance_documents": ["GLP-1 Prescribing Protocol", "Patient Monitoring Protocol", "Adverse Event Protocol", "FDA Compounding Compliance (if using compounded medications)"],
+      "staff_requirements": "Prescriptive authority required. Must be prescribed by physician, NP, or PA. Monitor FDA/Eli Lilly regulatory developments for compounded tirzepatide."
+    },
+    "chemical_peels": {
+      "display_name": "Chemical Peels (Superficial, Medium, Deep)",
+      "required_documents": ["Chemical Peel Consent Form", "Good Faith Exam / Patient Intake Form", "Pre & Post Treatment Instructions (Chemical Peel)", "Photo Consent Form", "Fitzpatrick Skin Type Assessment"],
+      "compliance_documents": ["Chemical Peel Treatment Protocol", "Depth Classification Guide"],
+      "staff_requirements": "Superficial peels may be performed by aestheticians in most states. Medium and deep peels are medical procedures requiring physician or mid-level provider."
+    },
+    "prp_therapy": {
+      "display_name": "PRP Therapy (Hair Loss, Facial Rejuvenation, Joint Therapy)",
+      "required_documents": ["PRP Treatment Consent Form", "Good Faith Exam / Patient Intake Form", "Pre & Post Treatment Instructions (PRP)", "Photo Consent Form", "Blood Draw Consent"],
+      "compliance_documents": ["PRP Processing Protocol", "Blood Draw & Handling Protocol", "Centrifuge Operation & Maintenance Log", "Biohazard Disposal Protocol"],
+      "staff_requirements": "Blood draw and PRP preparation/injection is a medical procedure. Requires physician, NP, PA, or RN under physician orders."
+    },
+    "hormone_therapy": {
+      "display_name": "Hormone Replacement Therapy (TRT, Estradiol, Pellet Therapy)",
+      "required_documents": ["Hormone Therapy Consent Form", "Testosterone Pellet Consent (if applicable)", "Estradiol Consent (if applicable)", "Comprehensive Medical History Form", "Lab Work Order Form", "Ovarian Cancer Waiver (for estradiol pellets)"],
+      "compliance_documents": ["Hormone Therapy Prescribing Protocol", "Lab Monitoring Schedule", "Pellet Insertion Protocol (if applicable)", "DEA Compliance (if controlled substances)"],
+      "staff_requirements": "Requires prescriptive authority. Must be managed by physician, NP, or PA. Lab monitoring required."
+    },
+    "body_contouring": {
+      "display_name": "Body Contouring (CoolSculpting, RF Body Tightening, Kybella)",
+      "required_documents": ["Body Contouring Consent Form", "Good Faith Exam / Patient Intake Form", "Pre & Post Treatment Instructions", "Photo Consent Form", "BMI/Body Measurement Assessment"],
+      "compliance_documents": ["Device-Specific Treatment Protocol", "Equipment Maintenance Log", "Operator Training Certification"],
+      "staff_requirements": "Medical procedure requiring physician delegation. Device-specific training and certification required."
+    }
+  },
+
+  "standard_compliance_package": {
+    "hipaa": {
+      "category": "HIPAA Compliance",
+      "documents": [
+        "Notice of Privacy Practices",
+        "Patient Consent to Use & Disclose PHI",
+        "Business Associate Agreement (BAA) Template",
+        "HIPAA Privacy Policy",
+        "HIPAA Security Policy",
+        "HIPAA Breach Notification Policy",
+        "Patient Right to Access Records Policy",
+        "Mobile Device Security Policy",
+        "HIPAA Training Log"
+      ]
+    },
+    "osha": {
+      "category": "OSHA Compliance",
+      "documents": [
+        "Bloodborne Pathogens Exposure Control Plan",
+        "OSHA Emergency Action Plan",
+        "Hazard Communication Plan",
+        "Sharps Injury Log",
+        "OSHA Training Certification Records",
+        "Personal Protective Equipment (PPE) Policy"
+      ]
+    },
+    "general_operations": {
+      "category": "General Operations",
+      "documents": [
+        "Patient Financial Responsibility Agreement",
+        "Patient Contact Authorization",
+        "Patient Consent to Leave Detailed Message",
+        "Release of Medical Records Form",
+        "Photo and Video Release & Consent",
+        "Telehealth Consent Form (if applicable)",
+        "Social Media Policy for Staff",
+        "Staff Treatment & Friends/Family Policy"
+      ]
+    },
+    "website": {
+      "category": "Website Compliance",
+      "documents": [
+        "Website Privacy Policy",
+        "Website Terms of Use",
+        "ADA Accessibility Compliance Check",
+        "Truthful Advertising Compliance Review",
+        "Cookie Policy (if applicable)"
+      ]
+    }
+  },
+
+  "template_types": {
+    "management_services_agreement": {
+      "display_name": "Management Services Agreement (MSA)",
+      "description": "The core document connecting the MSO and the physician-owned professional entity. Defines business services provided by the MSO, payment terms, and ensures clinical independence of the medical practice.",
+      "when_needed": "Required in all MSO structures (TX, CA, NY, and any state where non-physician needs MSO model)",
+      "key_sections": ["Parties & Recitals", "Term & Renewal", "Management Services Provided", "Compensation & Payment Priority", "Practice Autonomy & Clinical Independence", "Intellectual Property & Trademarks", "Assumed Trade Name", "Business Associate Agreement (Appendix)", "Insurance Requirements", "Non-Compete & Non-Solicitation", "Termination Provisions", "Dispute Resolution", "Governing Law"],
+      "state_customization_needed": true,
+      "typical_price_range": "$2,000-$5,000"
+    },
+    "medical_director_agreement": {
+      "display_name": "Medical Director / Collaborating Physician Agreement",
+      "description": "Establishes the relationship between the med spa and its medical director. Defines duties, compensation, supervision requirements, and compliance obligations.",
+      "when_needed": "Required for every med spa in every state",
+      "key_sections": ["Parties & Recitals", "Duties & Responsibilities (Appendix A)", "Term & Renewal", "Compensation", "Anti-Kickback Compliance", "Physician Qualifications", "Insurance & Indemnification", "Non-Compete", "Confidentiality", "Termination (With Cause & Without Cause)", "Notices", "Governing Law"],
+      "state_customization_needed": true,
+      "typical_price_range": "$500-$1,500"
+    },
+    "employment_agreement": {
+      "display_name": "Employment Agreement (Injector / NP / PA / RN)",
+      "description": "Employment contract for clinical staff. Includes MSO-specific provisions where applicable. Covers scope of duties, compensation, supervision, non-compete, and IP.",
+      "when_needed": "Every clinical hire (W-2 employee)",
+      "key_sections": ["Parties (Practice, Employee, MSO if applicable)", "Position & Duties", "Supervision & Medical Director Reporting", "Compensation & Benefits", "Schedule & Hours", "Intellectual Property & Social Media", "Non-Compete & Non-Solicitation", "Confidentiality", "Termination", "Insurance Requirements"],
+      "state_customization_needed": true,
+      "typical_price_range": "$500-$1,500"
+    },
+    "independent_contractor_agreement": {
+      "display_name": "Independent Contractor Agreement (Clinical Provider)",
+      "description": "1099 contractor agreement for clinical providers. Establishes independent contractor relationship, avoids employee misclassification. MSO version includes three-party structure.",
+      "when_needed": "When hiring clinical providers as independent contractors (1099)",
+      "key_sections": ["Parties (Practice, Contractor, MSO if applicable)", "Independent Contractor Status", "Scope of Services", "Compensation (no payroll deductions)", "Licensure & Insurance Requirements", "Supervision & Medical Director", "Intellectual Property & Social Media", "Non-Compete & Non-Solicitation", "Confidentiality", "Termination"],
+      "state_customization_needed": true,
+      "typical_price_range": "$500-$1,500"
+    },
+    "membership_agreement": {
+      "display_name": "Patient Membership Agreement",
+      "description": "Membership contract for patients subscribing to treatment packages or wellness plans. Covers terms, payments, cancellation, liability.",
+      "when_needed": "When offering membership or package-based pricing to patients",
+      "key_sections": ["Membership Terms", "Services Included", "Payment Terms", "Cancellation Policy", "Limitation of Liability", "Arbitration", "Force Majeure", "Severability"],
+      "state_customization_needed": false,
+      "typical_price_range": "$300-$900"
+    },
+    "nda_mutual": {
+      "display_name": "Mutual Non-Disclosure Agreement",
+      "description": "Protects confidential information shared between parties. Used for partnerships, vendor relationships, potential acquisitions.",
+      "when_needed": "Before sharing confidential business information with potential partners, investors, or vendors",
+      "key_sections": ["Parties", "Definition of Confidential Information", "Obligations", "Term", "Exceptions", "Remedies", "Governing Law"],
+      "state_customization_needed": false,
+      "typical_price_range": "$300-$600"
+    }
+  },
+
+  "onboarding_phases": {
+    "phase_1_intake": {
+      "name": "Initial Intake & Assessment",
+      "description": "Gather client information, determine state requirements, recommend entity structure and membership tier",
+      "typical_duration": "1-2 weeks",
+      "paralegal_hours": "2-3 hours",
+      "key_outputs": ["Client profile in Clio", "State requirement analysis", "Membership recommendation", "Welcome email with next steps"]
+    },
+    "phase_2_formation": {
+      "name": "Entity Formation",
+      "description": "Form the correct business entities, file with state, obtain EIN, set up MSO if needed",
+      "typical_duration": "2-8 weeks (varies by state)",
+      "paralegal_hours": "5-10 hours",
+      "key_outputs": ["LLC/PC/PLLC formation documents", "MSA (if MSO structure)", "EIN", "DBA filing", "Operating Agreement"]
+    },
+    "phase_3_medical_director": {
+      "name": "Medical Director Setup",
+      "description": "Find and onboard medical director, draft and execute agreement",
+      "typical_duration": "2-4 weeks",
+      "paralegal_hours": "3-5 hours",
+      "key_outputs": ["Medical Director Agreement", "Duties Appendix", "Collaborative/Supervision Agreements for mid-levels"]
+    },
+    "phase_4_compliance": {
+      "name": "Compliance Package Assembly",
+      "description": "Assemble all consent forms, HIPAA/OSHA documents, policies, and protocols based on services offered",
+      "typical_duration": "1-3 weeks",
+      "paralegal_hours": "5-8 hours",
+      "key_outputs": ["Service-specific consent forms", "HIPAA compliance package", "OSHA compliance package", "Website compliance checklist", "Treatment protocols", "Staff policies"]
+    },
+    "phase_5_staff_contracts": {
+      "name": "Staff Contracts & Onboarding",
+      "description": "Draft employment/IC agreements for all clinical and non-clinical staff",
+      "typical_duration": "1-2 weeks per hire",
+      "paralegal_hours": "2-4 hours per contract",
+      "key_outputs": ["Employment Agreements", "Independent Contractor Agreements", "Offer Letters", "Training Reimbursement Contracts (if applicable)", "NDA"]
+    }
+  }
+}

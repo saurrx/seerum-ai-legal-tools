@@ -1,0 +1,22 @@
+{
+  "manifest_version": "0.2",
+  "name": "seerum-ai-legal-tools",
+  "version": "1.0.0",
+  "description": "Healthcare law workflow automation — state requirements analysis, compliance package assembly, and agreement drafting for med spa practices.",
+  "author": {
+    "name": "seerum.ai",
+    "url": "https://seerum.ai"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "src/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/src/index.js"
+      ],
+      "env": {}
+    }
+  },
+  "license": "MIT"
+}

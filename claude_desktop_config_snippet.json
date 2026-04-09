@@ -1,0 +1,26 @@
+{
+  "_comment": "Add ONE of these configurations to your Claude Desktop config file",
+  "_config_location_mac": "~/Library/Application Support/Claude/claude_desktop_config.json",
+  "_config_location_win": "%APPDATA%\\Claude\\claude_desktop_config.json",
+
+  "option_a_npx_recommended": {
+    "mcpServers": {
+      "seerum-ai-legal-tools": {
+        "command": "npx",
+        "args": ["-y", "seerum-ai-legal-tools"]
+      }
+    }
+  },
+
+  "option_b_local_dev": {
+    "mcpServers": {
+      "seerum-ai-legal-tools": {
+        "command": "node",
+        "args": ["/absolute/path/to/seerum-ai-legal-tools/src/index.js"],
+        "env": {
+          "NODE_ENV": "production"
+        }
+      }
+    }
+  }
+}
